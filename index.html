@@ -1,222 +1,877 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Trade With Munaaf</title>
+<title>Work From Home Job</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-background:#0f172a;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-color:#fff;
+html {
+    scroll-behavior: smooth;
 }
 
-/* CARD */
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
 
-.container{
-width:95%;
-max-width:420px;
-padding:30px 25px;
-border-radius:18px;
-
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-
-border:1px solid rgba(255,255,255,0.08);
-
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255,255,255,.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #075fa3 0%,
+            #0b82d4 48%,
+            #18bd4a 100%
+        );
 }
 
-/* LOGO */
 
-.logo{
-width:80px;
-height:80px;
-border-radius:50%;
-border:2px solid #FFD700;
-margin-bottom:12px;
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.sio-main-container {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 14px;
 }
 
-/* TEXT */
 
-h1{
-font-size:22px;
-color:#FFD700;
-margin-bottom:6px;
+/* =========================
+   MAIN CARD
+========================= */
+
+.sio-landing-wrap {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    padding: 30px 22px 24px;
+
+    background: rgba(255,255,255,.98);
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.18),
+        0 5px 15px rgba(0,0,0,.08);
 }
 
-h2{
-font-size:15px;
-opacity:0.9;
-margin-bottom:10px;
+
+/* Top Gradient Line */
+
+.sio-landing-wrap::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0b6eb8,
+            #18c13d
+        );
 }
 
-.sub{
-font-size:13px;
-opacity:0.7;
-margin-bottom:18px;
+
+/* =========================
+   PROFILE
+========================= */
+
+.sio-profile {
+
+    margin: 5px 0 22px;
 }
 
-/* BUTTON */
 
-.btn{
-display:block;
-text-decoration:none;
-background:#22c55e;
-color:#000;
-font-weight:700;
-padding:16px;
-border-radius:10px;
-margin:12px 0;
-transition:0.3s;
+/* Badge */
+
+.sio-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-bottom: 15px;
+
+    padding: 7px 14px;
+
+    border-radius: 50px;
+
+    background: #eef8ff;
+
+    color: #0b6eb8;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .2px;
 }
 
-.btn:hover{
-background:#16a34a;
-transform:scale(1.03);
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.sio-avatar {
+
+    width: 135px;
+    height: 135px;
+
+    margin: 0 auto 16px;
+
+    padding: 5px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b6eb8,
+            #18c13d
+        );
+
+    box-shadow:
+        0 8px 25px rgba(11,110,184,.28),
+        0 0 0 5px rgba(255,255,255,.85);
 }
 
-/* TRUST BOX */
 
-.trust{
-background:rgba(0,255,150,0.08);
-padding:10px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:15px;
-border:1px solid rgba(0,255,150,0.2);
+.sio-avatar img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #fff;
 }
 
-/* LIST */
 
-.points{
-list-style:none;
-font-size:14px;
-text-align:left;
-margin:15px 0;
+/* =========================
+   HEADLINE
+========================= */
+
+.sio-headline {
+
+    max-width: 360px;
+
+    margin: 0 auto;
+
+    color: #18a83c;
+
+    font-size: 24px;
+
+    line-height: 1.3;
+
+    font-weight: 800;
 }
 
-.points li{
-margin:8px 0;
+
+/* =========================
+   BUTTON
+========================= */
+
+.sio-btn {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 55px;
+
+    padding: 15px 18px;
+
+    margin: 16px 0;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b6eb8,
+            #087fd0
+        );
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: .2px;
+
+    box-shadow:
+        0 8px 20px rgba(11,110,184,.28);
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
-/* URGENCY */
 
-.timer{
-margin-top:10px;
-font-size:13px;
-color:#facc15;
+/* Button Shine */
+
+.sio-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.28),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation: sio-shine 3s infinite;
 }
 
-/* SOCIAL PROOF */
 
-.proof{
-margin-top:12px;
-font-size:12px;
-opacity:0.7;
+/* Button Hover */
+
+.sio-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(11,110,184,.38);
 }
 
-/* FOOTER BRAND */
 
-.footer{
-margin-top:20px;
-font-size:12px;
-opacity:0.6;
+.sio-btn:active {
+
+    transform: scale(.98);
 }
 
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
+
+/* =========================
+   FEATURES
+========================= */
+
+.sio-features {
+
+    margin-top: 18px;
 }
 
-.footer a:hover{
-text-decoration:underline;
+
+/* Feature Box */
+
+.sio-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    width: 100%;
+
+    padding: 12px 13px;
+
+    margin: 9px 0;
+
+    text-align: left;
+
+    background: #f8fafc;
+
+    border: 1px solid #edf0f3;
+
+    border-radius: 13px;
 }
 
-/* RISK */
 
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.5;
+/* Tick */
+
+.sio-tick {
+
+    flex: 0 0 27px;
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f8ec;
+
+    color: #18a83c;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+/* Feature Text */
+
+.sio-feature p {
+
+    color: #30343b;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   HIGHLIGHT
+========================= */
+
+.sio-highlight {
+
+    margin: 17px 0;
+
+    padding: 13px 12px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef8ff,
+            #f1fff4
+        );
+
+    border: 1px solid #dcefe4;
+
+    color: #0871b9;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.sio-disclaimer {
+
+    margin-top: 18px;
+
+    padding: 9px 8px 0;
+
+    color: #777;
+
+    font-size: 10.5px;
+
+    line-height: 1.6;
+}
+
+
+.sio-disclaimer b {
+
+    color: #087a3b;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes sio-shine {
+
+    0% {
+        left: -100%;
+    }
+
+    45%,
+    100% {
+        left: 140%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .sio-main-container {
+
+        min-height: 100svh;
+
+        padding: 12px 8px;
+    }
+
+
+    .sio-landing-wrap {
+
+        max-width: 100%;
+
+        padding: 25px 14px 20px;
+
+        border-radius: 21px;
+    }
+
+
+    /* Bigger Mobile Image */
+
+    .sio-avatar {
+
+        width: 125px;
+        height: 125px;
+
+        padding: 5px;
+
+        margin-bottom: 15px;
+
+        box-shadow:
+            0 8px 25px rgba(11,110,184,.30),
+            0 0 0 4px rgba(255,255,255,.9);
+    }
+
+
+    .sio-profile {
+
+        margin: 5px 0 19px;
+    }
+
+
+    .sio-badge {
+
+        font-size: 10.5px;
+
+        padding: 6px 11px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .sio-headline {
+
+        max-width: 330px;
+
+        font-size: 21px;
+
+        line-height: 1.3;
+    }
+
+
+    .sio-btn {
+
+        min-height: 51px;
+
+        padding: 13px 14px;
+
+        margin: 13px 0;
+
+        font-size: 13.5px;
+    }
+
+
+    .sio-features {
+
+        margin-top: 15px;
+    }
+
+
+    .sio-feature {
+
+        gap: 9px;
+
+        padding: 10px;
+
+        margin: 7px 0;
+
+        border-radius: 11px;
+    }
+
+
+    .sio-tick {
+
+        flex-basis: 24px;
+
+        width: 24px;
+        height: 24px;
+
+        font-size: 13px;
+    }
+
+
+    .sio-feature p {
+
+        font-size: 12.5px;
+
+        line-height: 1.4;
+    }
+
+
+    .sio-highlight {
+
+        margin: 14px 0;
+
+        padding: 11px 9px;
+
+        font-size: 12.5px;
+    }
+
+
+    .sio-disclaimer {
+
+        margin-top: 14px;
+
+        padding-top: 6px;
+
+        font-size: 9.5px;
+
+        line-height: 1.5;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+
+    .sio-main-container {
+
+        padding: 9px 6px;
+    }
+
+
+    .sio-landing-wrap {
+
+        padding: 22px 12px 18px;
+
+        border-radius: 19px;
+    }
+
+
+    .sio-avatar {
+
+        width: 115px;
+        height: 115px;
+    }
+
+
+    .sio-headline {
+
+        font-size: 19px;
+    }
+
+
+    .sio-feature p {
+
+        font-size: 11.5px;
+    }
+
+
+    .sio-btn {
+
+        min-height: 49px;
+
+        font-size: 12.5px;
+    }
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<div class="container">
 
-<img src="https://i.ibb.co/HThtfpR7/Whats-App-Image-2026-01-30-at-8-54-08-PM.jpg" class="logo">
+<div class="sio-main-container">
 
-<h1>TRADE WITH MUNAAF</h1>
-<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
+    <div class="sio-landing-wrap">
 
-<p class="sub">
-Daily Intraday Trading Signals & Analysis
-</p>
 
-<!-- TOP BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
+        <!-- =========================
+             PROFILE
+        ========================== -->
 
-<div class="trust">
-✔ Trusted by 5,000+ Traders <br>
-✔ Daily Consistent Setups
+        <div class="sio-profile">
+
+            <div class="sio-badge">
+                ✓ WORK FROM HOME OPPORTUNITY
+            </div>
+
+
+            <div class="sio-avatar">
+
+                <img
+                    src=""
+                    alt="Work From Home"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sio-headline">
+                Work From Home Handwriting Job
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             TOP CTA
+        ========================== -->
+
+        <a
+            class="sio-btn"
+            href="https://t.me/+wAfcU7kwwtc3YTQx"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            JOIN TELEGRAM CHANNEL 🚀
+        </a>
+
+
+
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
+        <div class="sio-features">
+
+
+            <div class="sio-feature">
+
+                <div class="sio-tick">
+                    ✓
+                </div>
+
+                <p>
+                    Simple Writing Work – No Experience Needed
+                </p>
+
+            </div>
+
+
+
+            <div class="sio-feature">
+
+                <div class="sio-tick">
+                    ✓
+                </div>
+
+                <p>
+                    Earn ₹15,000 – ₹30,000 Per Month
+                </p>
+
+            </div>
+
+
+
+            <div class="sio-feature">
+
+                <div class="sio-tick">
+                    ✓
+                </div>
+
+                <p>
+                    Work From Home • Flexible Timing
+                </p>
+
+            </div>
+
+
+
+            <div class="sio-highlight">
+                🚀 Limited Seats Available – Apply Today!
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             BOTTOM CTA
+        ========================== -->
+
+        <a
+            class="sio-btn"
+            href="https://t.me/+wAfcU7kwwtc3YTQx"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            JOIN TELEGRAM CHANNEL 🚀
+        </a>
+
+
+
+        <!-- =========================
+             DISCLAIMER
+        ========================== -->
+
+        <div class="sio-disclaimer">
+
+            <b>Note:</b>
+
+            This is project-based work.
+            Earnings depend on performance and
+            submission quality.
+
+        </div>
+
+
+    </div>
+
 </div>
 
-<ul class="points">
-<li>✔ 5–7 High Probability Trades</li>
-<li>✔ Exact Entry, SL & Target</li>
-<li>✔ Beginner Friendly Guidance</li>
-<li>✔ Live Market Updates</li>
-</ul>
 
-<!-- BOTTOM BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
 
-<div class="timer">
-⏳ Free Access Closing Soon
-</div>
+<!-- =========================
+     META PIXEL
+========================== -->
 
-<div class="proof">
-📈 Limited Seats • Active Community
-</div>
+<script>
 
-<p class="risk">
-⚠ Market investments are subject to risk
-</p>
+!function(f,b,e,v,n,t,s)
+{
+    if(f.fbq)return;
 
-<!-- CLEAN FOOTER -->
-<div class="footer">
-Powered by 
-<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
-AdsBuild Agency
-</a>
-</div>
+    n=f.fbq=function()
+    {
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+    };
 
-</div>
+    if(!f._fbq)
+        f._fbq=n;
+
+    n.push=n;
+    n.loaded=!0;
+    n.version='2.0';
+
+    n.queue=[];
+
+    t=b.createElement(e);
+    t.async=!0;
+
+    t.src=v;
+
+    s=b.getElementsByTagName(e)[0];
+
+    s.parentNode.insertBefore(t,s)
+
+}
+(window, document, 'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '3280963472095435');
+
+fbq('track', 'PageView');
+
+</script>
+
+
+<noscript>
+
+<img
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=3280963472095435&ev=PageView&noscript=1"
+/>
+
+</noscript>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1535659705134842');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1535659705134842&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
 </body>
 </html>
